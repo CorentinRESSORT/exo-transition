@@ -1,0 +1,30 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.first
+{
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 100px;
+    aspect-ratio: 2/1;
+
+    color: grey;
+    background-color: white;
+    border: 5px solid grey;
+    transition: color 2s,background-color 2s,border-color 2s, transform 2s;
+    transform: rotateY(360deg);
+}
+
+
+.first:hover
+{
+    color: red;
+    transform: rotateY(0deg);
+    transition: transform 0s;
+    background-color: rgba(255, 0, 0, 0.123);
+    border-color: red;
+}
