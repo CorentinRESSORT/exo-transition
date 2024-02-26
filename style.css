@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+body
+{
+    height: 100vh;
+    background-color: #000;
+}
 .first
 {
     margin-top: 5%;
@@ -13,9 +18,9 @@
     aspect-ratio: 2/1;
 
     color: grey;
-    background-color: white;
+    background-color: rgba(128, 128, 128, 0.11);
     border: 5px solid grey;
-    transition: color 2s,background-color 2s,border-color 2s, transform 2s;
+    transition: transform 2s;
     transform: rotateY(360deg);
 }
 
@@ -24,7 +29,46 @@
 {
     color: red;
     transform: rotateY(0deg);
-    transition: transform 0s;
+    transition: color 1s,background-color 1s,border-color 1s, transform 0s;
     background-color: rgba(255, 0, 0, 0.123);
     border-color: red;
+}
+
+
+.two
+{
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 100px;
+    aspect-ratio: 2/1;
+
+    border-radius: 50px;
+    background-color: orange;
+    transition: border .5s;
+    border: 2px solid orange;
+    color: white;
+}
+
+.two:hover
+{
+    background-color: orange;
+    border: 2px solid white;
+    color: white;
+}
+
+.two span
+{
+    display: inline-block;
+    transition: all .5s;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.two:hover>span
+{
+    transition: all .5s;
+    color: orange;
+    border-radius: 20px;
+    background-color: white;
+    transform: rotate(1turn);
 }
